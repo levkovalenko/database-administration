@@ -1,0 +1,21 @@
+version: '3.1'
+services:
+  mssql-server-server:
+    image: mcr.microsoft.com/mssql/server
+    container_name: mssql
+    hostname: mssql-server-server
+    ports:
+      - "1433:1433"
+      - "5022:5022"
+    volumes:
+      - "./data/mssql-server:/var/opt/mssql"
+      - "./backups:/backups"
+      - "./scripts:/scripts"
+    environment:
+      - "ACCEPT_EULA=Y"
+      - "SA_PASSWORD=axcaxs123QWE"
+      - "MSSQL_TCP_PORT=1433"
+      - "MSSQL_DATA_DIR=/var/opt/mssql/data" 
+      - "MSSQL_LOG_DIR=/var/opt/mssql/log"
+      - "MSSQL_DUMP_DIR=/var/opt/mssql/dumps"
+
