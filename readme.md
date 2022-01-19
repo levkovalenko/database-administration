@@ -15,3 +15,7 @@ docker exec -it mssql /bin/bash
 
 ## воставносить из бекапа
 `/opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P 'axcaxs123QWE' -i /scripts/restore_procedure.sql`
+
+
+## проверить права пользователя для всех таблиц 
+`/opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P 'axcaxs123QWE' -i /scripts/permissions_procedure.sql`
