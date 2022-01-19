@@ -19,3 +19,6 @@ docker exec -it mssql /bin/bash
 
 ## проверить права пользователя для всех таблиц 
 `/opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P 'axcaxs123QWE' -i /scripts/permissions_procedure.sql`
+
+## разбиение таблицы с помощью кластерного индекса
+`/opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P 'axcaxs123QWE' -i /scripts/partionaling.sql`
